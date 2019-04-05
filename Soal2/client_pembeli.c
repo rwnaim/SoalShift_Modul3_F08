@@ -35,10 +35,11 @@ int main(int argc, char const *argv[])
     }
 
     printf("Koneksi dengan server telah berhasil\n");
-    
+
+    printf("Ketik 'beli' untuk mengurangi stok : ");
+    scanf("%s \n", beli);
     while(1){
-        printf("Ketik 'beli' untuk mengurangi stok : ");
-        scanf("%s \n", beli);
+        
         if(strcmp(beli, "beli")==0)
         {
             send(sock, beli, strlen(beli), 0);
